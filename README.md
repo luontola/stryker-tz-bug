@@ -2,7 +2,7 @@
 
 ## Summary
 
-The Stryker vitest runner hardcodes `pool: 'threads'` ([vitest-test-runner.ts L103](https://github.com/stryker-mutator/stryker-js/blob/master/packages/vitest-runner/src/vitest-test-runner.ts#L103)), overriding the project's configured pool. This causes vitest's `env: { TZ: '...' }` setting to have no effect, because in Node.js worker threads the `Intl.DateTimeFormat` timezone is locked at thread creation and cannot be changed by setting `process.env.TZ` afterwards.
+The Stryker vitest runner hardcodes `pool: 'threads'` ([vitest-test-runner.ts L102](https://github.com/stryker-mutator/stryker-js/blob/v9.6.1/packages/vitest-runner/src/vitest-test-runner.ts#L102)), overriding the project's configured pool. This causes vitest's `env: { TZ: '...' }` setting to have no effect, because in Node.js worker threads the `Intl.DateTimeFormat` timezone is locked at thread creation and cannot be changed by setting `process.env.TZ` afterwards.
 
 Any test that relies on `env.TZ` to get a deterministic timezone will pass with `vitest run` but fail in Stryker's dry run.
 
