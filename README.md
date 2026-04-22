@@ -66,7 +66,9 @@ test('formats a date in UTC', () => {
 /** @type {import('@stryker-mutator/api/core').PartialStrykerOptions} */
 const config = {
   testRunner: 'vitest',
-  vitest: { configFile: 'vitest.config.ts' },
+  vitest: {
+    configFile: 'vitest.config.ts',
+  },
   mutate: ['src/**/*.ts', '!src/**/*.test.ts'],
   reporters: ['clear-text'],
   coverageAnalysis: 'perTest',
