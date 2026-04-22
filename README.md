@@ -8,9 +8,9 @@ Any test that relies on `env.TZ` to get a deterministic timezone will pass with 
 
 ## Environment
 
-- @stryker-mutator/core: 9.6.0
-- @stryker-mutator/vitest-runner: 9.6.0
-- vitest: 4.1.x
+- @stryker-mutator/core: 9.6.1
+- @stryker-mutator/vitest-runner: 9.6.1
+- vitest: 4.1.5
 - Node.js: 23.10.0 / 24.14.1
 - OS: macOS (Europe/Helsinki system timezone)
 
